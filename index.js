@@ -48,10 +48,11 @@ Persona.prototype.caminar = function() {
 function PersonaProto(nombre,edad) {
     this.nombre = nombre;
     this.edad  = edad;
-    PersonaProto.prototype.caminar = function (){
-        return `${this.nombre} esta caminando`;
-    };
 }
+PersonaProto.prototype.caminar = function (){
+    return `${this.nombre} esta caminando`;
+};
+
    
 const persona1Proto = new PersonaProto("persona1", 23)
 const persona2Proto = new PersonaProto("persona2", 24)
@@ -76,8 +77,8 @@ class Animal{
 }
 
 class Perro extends Animal{
-    super (nombre){
-        this.nombre = nombre;
+    constructor (nombre){
+        super(nombre)
     }
 }
 
